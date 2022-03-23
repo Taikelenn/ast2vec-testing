@@ -6,6 +6,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
+correct_solutions_path = "data/correct/"
+wrong_solutions_path = "data/wrong/"
+
 astmodel = ast2vec.load_model()
 
 # Converts a .py file to a list of numbers using ast2vec
@@ -19,16 +22,18 @@ filenames = []
 X = []
 y = []
 
+print("Reading from " + correct_solutions_path)
 # Read correct solutions, label them "1"
-for filename in os.listdir("data/correct"):
-    filenames.append("data/correct/" + filename)
-    X.append(file_to_vector("data/correct/" + filename))
+for filename in os.listdir(correct_solutions_path):
+    filenames.append(correct_solutions_path + filename)
+    X.append(file_to_vector(correct_solutions_path + filename))
     y.append(1)
 
+print("Reading from " + wrong_solutions_path)
 # Read wrong solutions, label them "-1"
-for filename in os.listdir("data/wrong"):
-    filenames.append("data/wrong/" + filename)
-    X.append(file_to_vector("data/wrong/" + filename))
+for filename in os.listdir(wrong_solutions_path):
+    filenames.append(wrong_solutions_path + filename)
+    X.append(file_to_vector(wrong_solutions_path + filename))
     y.append(-1)
 
 # Check for potential duplicates in embeddings
