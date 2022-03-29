@@ -1,0 +1,2 @@
+Module(Assign(Name, Call(Name, Call(Name, Constant))), If(BoolOp(Or, Constant, Compare(Name, Gt, Constant)), Then(Expr(Call(Name, BinOp(Name, Mult, Constant)))), Else(Expr(Call(Name, Constant)))))
+Module(Assign(Name, Call(Name, Call(Name, Constant))), If(BoolOp(Or, Compare(Name, Eq, Constant), Constant), Then(Expr(Call(Name, BinOp(Constant, Add, Name)))), Else(Expr(Call(Name, Constant)))))

@@ -1,0 +1,2 @@
+Module(Assign(Name, Call(Name, Call(Name, Constant))), Expr(Call(Name, BinOp(Name, Mult, Constant))))
+Module(Assign(Name, Call(Name, Call(Name, Constant))), Expr(Call(Name, BinOp(Name, Mult, Constant))))
