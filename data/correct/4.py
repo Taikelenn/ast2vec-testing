@@ -1,6 +1,6 @@
-num = int(input("Enter a number: "))
+x = int(input("Enter a number: "))
 
-if not num < 101:
-    print(num * 2)
+if not x < 101:
+    print(x * 2)
 else:
     print("Number too small")

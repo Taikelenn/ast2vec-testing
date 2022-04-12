@@ -1,2 +1,2 @@
-num = int(input("Enter a number: "))
+x = int(input("Enter a number: "))
 print("Number too small")
